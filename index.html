@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden; /* Keeps the website window static */
+            overflow: hidden; 
             background-color: #f0ebf8; 
         }
 
@@ -19,16 +19,13 @@
             display: flex;
             justify-content: center;
             box-sizing: border-box;
-            
-            /* SAFETY BUFFER: Pushes the bottom of the form up by 80 pixels */
-            /* This ensures mobile browser bars overlap empty space, not your buttons */
-            padding-bottom: 80px; 
+            padding-bottom: 80px; /* Mobile safety buffer */
         }
 
         iframe {
             width: 100%;
             max-width: 640px; 
-            height: 100%;    /* Fills the container, respecting the padding above */
+            height: 100%;    
             border: none;
             display: block;
         }
@@ -37,7 +34,8 @@
 <body>
 
     <div class="form-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUZ4ldLMkdgTpud_PlU6UMI1xaKJdnRGPb3u8DmnfuLA8YGw/viewform?embedded=true" marginheight="0" marginwidth="0">Loading…</iframe>
+        <!-- Google Form Embed Code with Hardcoded English Parameter (&hl=en) -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUZ4ldLMkdgTpud_PlU6UMI1xaKJdnRGPb3u8DmnfuLA8YGw/viewform?embedded=true&hl=en" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 
 </body>

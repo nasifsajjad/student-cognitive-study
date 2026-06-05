@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Cognitive Profile Study</title>
     <style>
-        /* Removes all default spacing around the browser window */
+        /* Forces the main website to occupy exactly 100% of the screen with zero scrolling */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
-            background-color: #f0ebf8; /* Matches the default Google Forms background */
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            overflow: hidden; /* Removes the website's outer scrollbar */
+            background-color: #f0ebf8; /* Matches Google Forms theme */
         }
 
-        /* Makes sure the form container looks clean and centered */
+        /* Container scales perfectly to fill the browser window */
         .form-container {
             width: 100%;
-            max-width: 640px;
-            margin: 20px auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
         }
 
+        /* The iframe now handles 100% of the vertical space and scrolling */
         iframe {
             width: 100%;
+            max-width: 640px; /* Keeps the form layout crisp and un-stretched */
+            height: 100vh;    /* Fills the exact height of the screen */
+            border: none;
             display: block;
         }
     </style>
@@ -32,8 +35,7 @@
 <body>
 
     <div class="form-container">
-        <!-- Your official Google Form Embed Code -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUZ4ldLMkdgTpud_PlU6UMI1xaKJdnRGPb3u8DmnfuLA8YGw/viewform?embedded=true" height="1285" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUZ4ldLMkdgTpud_PlU6UMI1xaKJdnRGPb3u8DmnfuLA8YGw/viewform?embedded=true" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 
 </body>
